@@ -1,0 +1,22 @@
+# 敏感信息
+.env
+saved_config.json
+
+# 浏览器数据
+browser_data/
+
+# 日志
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# 系统
+Thumbs.db
+.DS_Store
