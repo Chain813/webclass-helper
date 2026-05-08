@@ -1,0 +1,12 @@
+node_modules
+dist
+lib
+package-lock.json
+pnpm-lock.yaml
+public
+stats.html
+.md
+packages/scripts/entry.base.js
+packages/scripts/entry.common.js
+packages/scripts/entry.dev.js
+packages/scripts/entry.js

@@ -1,0 +1,6 @@
+packages:
+  - 'packages/**'
+  - '!**/dist/**'
+allowBuilds:
+  es5-ext: true
+  esbuild: true

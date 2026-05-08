@@ -1,0 +1,75 @@
+{
+	"name": "ocsjs",
+	"version": "4.13.4",
+	"description": "ocs - online course script 在线网络课程辅助工具",
+	"types": "./lib/src/core/index.d.ts",
+	"main": "./lib/src/core/index.js",
+	"files": [
+		"lib",
+		"dist"
+	],
+	"scripts": {
+		"dev": "gulp -f ./scripts/dev-core.js",
+		"build": "gulp -f ./scripts/build-core.js",
+		"tsc": "pnpm lint && gulp -f ./scripts/tsc.js",
+		"lint": "pnpm format && eslint ./packages --fix",
+		"format": "prettier --config ./.prettierrc.json **/*.ts **/*.js **/*.css --write",
+		"release": "sh ./scripts/release.sh",
+		"pub:minor": "npm version minor && pnpm build && npm publish",
+		"pub:major": "npm version major && pnpm build && npm publish",
+		"changelog:simplify": "gulp -f ./scripts/simplify_changelog.js",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md --same-file -r 0",
+		"changelog:current": "conventional-changelog -p angular -o CHANGELOG_CURRENT.md -r 1",
+		"init-commitizen": "commitizen init cz-conventional-changelog --save --save-exact"
+	},
+	"devDependencies": {
+		"@html-eslint/eslint-plugin": "^0.15.0",
+		"@types/node": "^20.0.0",
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
+		"browser-env": "^3.3.0",
+		"conventional-changelog-cli": "^2.2.2",
+		"cz-conventional-changelog": "^3.3.0",
+		"del": "^6.0.0",
+		"dotenv": "^17.4.2",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^10.0.0",
+		"eslint-plugin-import": "^2.29.0",
+		"eslint-plugin-n": "^17.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-promise": "^7.0.0",
+		"eslint-plugin-vue": "^9.28.0",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-zip": "^5.1.0",
+		"node-fetch": "^3.3.2",
+		"prettier": "^3.0.0",
+		"typescript": "^5.7.0",
+		"typescript-eslint": "^8.59.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chain813/webclass-helper.git"
+	},
+	"keywords": [
+		"ocs",
+		"script",
+		"playwright",
+		"puppeteer",
+		"electron",
+		"vue",
+		"ant-design-vue",
+		"typescript"
+	],
+	"author": "enncy",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Chain813/webclass-helper/issues"
+	},
+	"homepage": "https://github.com/Chain813/webclass-helper#readme",
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
